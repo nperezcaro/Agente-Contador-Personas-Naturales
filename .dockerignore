@@ -1,0 +1,43 @@
+# --- Secrets (must never enter the build context) ---
+.env
+*.pem
+*.key
+
+# --- Python runtime artifacts ---
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+*.egg-info/
+
+# --- Test / CI artifacts ---
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# --- Dev tooling ---
+.pre-commit-config.yaml
+.ruff_cache/
+.mypy_cache/
+
+# --- Version control ---
+.git/
+.gitignore
+
+# --- Editor / OS noise ---
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# --- Planning / docs that don't belong in the image ---
+.planning/
+*.md
+!README.md
+
+# --- Data files used only for local testing ---
+*.xlsx
+*.csv

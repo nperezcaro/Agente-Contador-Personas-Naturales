@@ -1,0 +1,31 @@
+[project]
+name = "AgenteContadorPersonasNaturales"
+version = "0.1.0"
+description = "Agente de Contabilidad para Personas Naturales"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "marimo>=0.23.9",
+    "pre-commit>=4.6.0",
+    "pytest>=9.0.3",
+    "ruff>=0.15.16",
+]
+
+[tool.ruff]
+line-length = 120 # Allow lines uo to 120 characters to improve readability
+
+lint.select = [
+    "D", # Pydocstyle
+    "E", # PEP 8 error codes
+    "F", # Flake8 checks
+    "I", # Import sorting
+    "T", # Flake8-print (T201 catches print() calls)
+]
+
+lint.ignore = [
+    "D203", # Conflicts with D211,
+    "D213", # Enforces docstring summary on the second line, better on the first line D212
+]
